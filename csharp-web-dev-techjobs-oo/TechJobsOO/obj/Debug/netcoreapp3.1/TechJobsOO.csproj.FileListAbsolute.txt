@@ -1,0 +1,12 @@
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.csprojAssemblyReference.cache
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.AssemblyInfoInputs.cache
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.AssemblyInfo.cs
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.csproj.CoreCompileInputs.cache
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/bin/Debug/netcoreapp3.1/TechJobsOO.deps.json
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/bin/Debug/netcoreapp3.1/TechJobsOO.runtimeconfig.json
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/bin/Debug/netcoreapp3.1/TechJobsOO.runtimeconfig.dev.json
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/bin/Debug/netcoreapp3.1/TechJobsOO.dll
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/bin/Debug/netcoreapp3.1/TechJobsOO.pdb
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.dll
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.pdb
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/TechJobsOO/obj/Debug/netcoreapp3.1/TechJobsOO.genruntimeconfig.cache
