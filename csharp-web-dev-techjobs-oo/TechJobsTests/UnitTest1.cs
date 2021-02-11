@@ -12,6 +12,7 @@ namespace TechJobsTests
         Job testJob1;
         Job testJob2;
         Job testJob3;
+        Job testJob4;
 
 
 
@@ -22,7 +23,7 @@ namespace TechJobsTests
             testJob1 = new Job("Servant", new Employer("cats"), new Location("house"), new PositionType("servant"), new CoreCompetency("canOpener"));
             testJob2 = new Job("Servant", new Employer("cats"), new Location("house"), new PositionType("servant"), new CoreCompetency("canOpener"));
             testJob3 = new Job("Servant", new Employer("cats"), new Location("house"), new PositionType("servant"), new CoreCompetency("canOpener"));
-
+            testJob4 = new Job("Servant", new Employer("cats"), new Location(""), new PositionType(""), new CoreCompetency("canOpener"));
         }
 
 
@@ -54,16 +55,12 @@ namespace TechJobsTests
         }
 
         [TestMethod]
-        public void TestJobToString()
+        public void TestJobToString() // build an actual string
         {
 
-            Assert.IsTrue(testJob1.ToString().Contains($"ID: " + testJob1.Id));
-            Assert.IsTrue(testJob1.ToString().Contains($"Name: " + testJob1.Name));
-            Assert.IsTrue(testJob1.ToString().Contains($"Employer: " + testJob1.EmployerName.Value));
-            Assert.IsTrue(testJob1.ToString().Contains($"Location: " + testJob1.EmployerLocation.Value));
-            Assert.IsTrue(testJob1.ToString().Contains($"PositionType: " + testJob1.JobType.Value));
-            Assert.IsTrue(testJob1.ToString().Contains($"CoreCompetency: " + testJob1.JobCoreCompetency.Value));
+            string testString = $"\nID: {testJob2.Id}\n Name: {testJob2.Name}\n Employer: {testJob2.EmployerName.Value}\n Location: {testJob2.EmployerLocation.Value}\n Position Type: {testJob2.JobType.Value}\n Core Competency: {testJob2.JobCoreCompetency.Value}\n";
 
+            Assert.AreEqual(testJob2.ToString(), testString);
         }
 
         [TestMethod]
@@ -77,8 +74,8 @@ namespace TechJobsTests
         [TestMethod]
         public void TestOutput()
         {
-            string testString = $"\nID: {testJob2.Id}\n Name: {testJob2.Name}\n Employer: {testJob2.EmployerName.Value}\n Location: Data Not Available\n Position Type: Data Not Available\n Core Competency: {testJob2.JobCoreCompetency.Value}\n";
-            Assert.AreEqual(testJob2.ToString(), testString);
+            string testString = $"\nID: {testJob4.Id}\n Name: {testJob4.Name}\n Employer: {testJob4.EmployerName.Value}\n Location: Data Not Available\n Position Type: Data Not Available\n Core Competency: {testJob4.JobCoreCompetency.Value}\n";
+            Assert.AreEqual(testJob4.ToString(), testString);
         }
     }
 }

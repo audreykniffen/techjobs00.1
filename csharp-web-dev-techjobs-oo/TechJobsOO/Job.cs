@@ -53,10 +53,11 @@ namespace TechJobsOO
             if (String.IsNullOrEmpty(Name))
             {
                 Name = "Data not avaliable";
-                if (string.IsNullOrEmpty(EmployerName.Value))
-                {
-                    EmployerName.Value = "Data Not Available";
-                }
+            }
+             if (string.IsNullOrEmpty(EmployerName.Value))
+            {
+             EmployerName.Value = "Data Not Available";
+            }
                 if (string.IsNullOrEmpty(EmployerLocation.Value))
                 {
                     EmployerLocation.Value = "Data Not Available";
@@ -72,7 +73,7 @@ namespace TechJobsOO
                 return $"\nID: {Id}\n Name: {Name}\n Employer: {EmployerName.Value}\n Location: {EmployerLocation.Value}\n Position Type: {JobType.Value}\n Core Competency: {JobCoreCompetency.Value}\n";
 
 
-            }
+            
         }
     }
 }
