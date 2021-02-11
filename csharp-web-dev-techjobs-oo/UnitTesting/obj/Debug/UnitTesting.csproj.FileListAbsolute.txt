@@ -1,0 +1,6 @@
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/bin/Debug/UnitTesting.dll
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/bin/Debug/UnitTesting.pdb
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/obj/Debug/UnitTesting.csprojAssemblyReference.cache
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/obj/Debug/UnitTesting.csproj.CoreCompileInputs.cache
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/obj/Debug/UnitTesting.dll
+/Users/audreykniffen/codecamp2020m/visualstudio/csharp-web-dev-techjobs-oo/UnitTesting/obj/Debug/UnitTesting.pdb

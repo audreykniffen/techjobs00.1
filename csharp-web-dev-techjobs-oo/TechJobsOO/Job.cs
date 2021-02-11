@@ -1,71 +1,80 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace TechJobsOO
 {
     public class Job
     {
         public int Id { get; }
         private static int nextId = 1;
-        public string Value { get; set; }
 
-        public string Name { get; set; } //only string
-        public Employer EmployerName { get; set; } //class
-        public Location EmployerLocation { get; set; } // class
-        public PositionType JobType { get; set; } // class
-        public CoreCompetency JobCoreCompetency { get; set; } // class
+        public string Name { get; set; }
+        public Employer EmployerName { get; set; }
+        public Location EmployerLocation { get; set; }
+        public PositionType JobType { get; set; }
+        public CoreCompetency JobCoreCompetency { get; set; }
 
-        // TODO: Add the two necessary constructors.
-
-        // TODO: Generate Equals() and GetHashCode() methods.
-    }
-}
-
-
-// jobs class notes:
-/* 
- * 
- * fields/properties: Id (number), Name (string), EmployerName (Employer object), 
- * EmployerLocation (Location object), JobType (PositionType object), 
- * JobCoreCompetency (CoreCompetency object)
-Two constructors: the first constructor will have no parameters and will
-assign a value to the id property for a Job object and increment the id
-field for the class; the second constructor will have 5 parameters to
-assign to the 5 remaining properties for a Job object and calls the
-first constructor, in order to assign the id property for the Job object.
-[See Employer.cs for a working pattern that could satisfy this particular spec]
-Methods: Equals(), GetHashCode(), and ToString().
-
-
-Code a constructor to initialize the id field with a unique value. This
-constructor should take no parameters.
-Code a second constructor that takes 5 parameters and assigns values to
-name, employerName, employerLocation, jobType, and jobCoreCompetency. Also,
-this constructor should call the first in order to initialize the id field.
-Generate the Equals() and GetHashCode() methods. Consider two Job objects equal
-when their id fields match.
-
-  public override bool Equals(object obj)
+        public Job()
         {
-            return obj is Employer employer &&
-                   Id == employer.Id;
+            Id = nextId;
+            nextId++;
         }
+
+        /*
+         * Code a second constructor that takes 5 parameters and assigns values to name, employerName, employerLocation, jobType, and jobCoreCompetency. 
+         * Also, this constructor should call the first in order to initialize the id field.*/
+
+        public Job(string name, object employerName, object employerLocation, object jobType, object jobCoreCompetency) : this()
+        {
+            Name = name;
+            EmployerName = (Employer)employerName;
+            EmployerLocation = (Location)employerLocation;
+            JobType = (PositionType)jobType;
+            JobCoreCompetency = (CoreCompetency)jobCoreCompetency;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Job job &&
+                   Id == job.Id &&
+                   Name == job.Name;
+        }
+
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Id);
+            return HashCode.Combine(Id, Name, EmployerName, EmployerLocation, JobType, JobCoreCompetency);
         }
+
+
 
         public override string ToString()
         {
-            return Value;
+            if (String.IsNullOrEmpty(Name))
+            {
+                Name = "Data not avaliable";
+                if (string.IsNullOrEmpty(EmployerName.Value))
+                {
+                    EmployerName.Value = "Data Not Available";
+                }
+                if (string.IsNullOrEmpty(EmployerLocation.Value))
+                {
+                    EmployerLocation.Value = "Data Not Available";
+                }
+                if (string.IsNullOrEmpty(JobType.Value))
+                {
+                    JobType.Value = "Data Not Available";
+                }
+                if (string.IsNullOrEmpty(JobCoreCompetency.Value))
+                {
+                    JobCoreCompetency.Value = "Data Not Available";
+                }
+                return $"\nID: {Id}\n Name: {Name}\n Employer: {EmployerName.Value}\n Location: {EmployerLocation.Value}\n Position Type: {JobType.Value}\n Core Competency: {JobCoreCompetency.Value}\n";
+
+
+            }
         }
-
-needs necessary constructors, then i can define the equals() method.
-use unit testing to verify if parts of job class will work.
-tdd to build the tostring method. a coupel of requireents on ht etwo string fn
-in the job class. (colons after property names)
-if a field is empty method shoudl add data not avaiable after the label
-tests start small and simple and get more complex because each test needs ot tur green
-after two string, 
-
-*/
+    }
+}
+  
  
